@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Small world Unity Project.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\LightHouseBehavior.cs">
+    <Files>
+      <File FileName="Assets\script\LightHouseBehavior.cs" Line="14" Column="38" />
+      <File FileName="Assets\script\GameManager.cs" Line="10" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
