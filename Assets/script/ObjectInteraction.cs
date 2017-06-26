@@ -19,26 +19,9 @@ public class ObjectInteraction : MonoBehaviour {
 			Debug.DrawRay(ray.origin,Vector3.forward*100,Color.green,1);
 			var hit = Physics2D.GetRayIntersection(ray);
 			if (hit.collider != null) {
-				Debug.Log("Collider "+hit.collider.gameObject.name);
-				if(hit.collider.gameObject.name=="Cap"){				
-					hit.collider.gameObject.GetComponent<CapBehavior> ().looseCap ();
+				if(hit.collider.gameObject.GetComponent<TouchObj>() is TouchObj){				
+					hit.collider.gameObject.GetComponent<TouchObj> ().objectInteraction ();
 				}
-				if(hit.collider.gameObject.name=="Storm"){				
-					hit.collider.gameObject.GetComponent<StormBehavior> ().objectAction ();
-				}
-				if(hit.collider.gameObject.name=="Boat"){				
-					hit.collider.gameObject.GetComponent<BoatBehavior> ().objectAction ();
-				}
-
-				if(hit.collider.gameObject.name=="Shoal"){				
-					hit.collider.gameObject.GetComponent<ShoalBehavior> ().objectAction ();
-				}
-
-				if(hit.collider.gameObject.name=="LightHouse"){				
-					hit.collider.gameObject.GetComponent<LightHouseBehavior> ().lightHouseText ();
-				}
-
-
 			}
 		}  
 	}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShoalBehavior : MonoBehaviour {
+public class ShoalBehavior : MonoBehaviour,TouchObj {
 
 	public GameManager gameManager;
 	public GameObject squid;
@@ -18,11 +18,13 @@ public class ShoalBehavior : MonoBehaviour {
 		
 	}
 
-	public void objectAction(){
-		gameManager.squidBusyFlag = true;
-		gameManager.changeMessage ("El calamar llena su barriga");
-		squid.SetActive (true);
-		squid.transform.position=squidNewPostion.transform.position;
+	public void objectInteraction(){
+		if(gameManager.stormLeaveFlag){
+			gameManager.squidBusyFlag = true;
+			gameManager.changeMessage ("El calamar llena su barriga");
+			squid.SetActive (true);
+			squid.transform.position=squidNewPostion.transform.position;
+		}
 	}
 }
 

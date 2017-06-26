@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene/Escena_1_botella_1.unity
+- path: Assets/scene/Escena_Menu.unity
   isLoaded: 1
   isActive: 1

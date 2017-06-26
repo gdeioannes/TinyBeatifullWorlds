@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CapBehavior : MonoBehaviour {
+public class CapBehavior : MonoBehaviour,TouchObj {
 
 	public GameManager gameManager;
 	public GameObject storm;
@@ -25,7 +25,7 @@ public class CapBehavior : MonoBehaviour {
 		
 	}
 
-	public void looseCap (){
+	public void objectInteraction (){
 
 		if (checkMaxCap ()) {
 			
@@ -33,7 +33,7 @@ public class CapBehavior : MonoBehaviour {
 
 			StartCoroutine( gameManager.fadeSprite (storm,0.1f));
 			if (gameManager.lightHouseOnFlag == false) {
-				gameManager.changeMessage ("Perdiste");
+				gameManager.changeMessage ("La Historia termina abruptamente.");
 				gameManager.showPanel ();
 			} else {
 				gameManager.changeMessage ("Y las historia continua");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StormBehavior : MonoBehaviour {
+public class StormBehavior : MonoBehaviour,TouchObj {
 
 	public GameObject ligth;
 	public ParticleSystem lighting;
@@ -19,7 +19,7 @@ public class StormBehavior : MonoBehaviour {
 
 	}
 
-	public void objectAction(){
+	public void objectInteraction(){
 		lightExplotion.Play ();
 		lighting.Play ();
 		if (gameManager.lightHouseOnFlag == false) {

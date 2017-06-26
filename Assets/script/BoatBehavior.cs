@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoatBehavior : MonoBehaviour {
+public class BoatBehavior : MonoBehaviour,TouchObj {
 
 	public GameManager gameManager;
 	public GameObject squid;
@@ -21,10 +21,10 @@ public class BoatBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
-	public void objectAction(){
+	public void objectInteraction(){
 		
 		if (!gameManager.lightHouseOnFlag && !gameManager.animateFlag ){
 			countTouch = countTouch + 1;
@@ -57,7 +57,6 @@ public class BoatBehavior : MonoBehaviour {
 				gameManager.changeMessage ("Y el bote fue detenido por el calamar");
 		} else if (gameManager.squidBusyFlag && gameManager.stormLeaveFlag){
 				gameManager.changeMessage ("El barco llego al puerto al fin");
-				gameObject.transform.position = boatNewPostion.transform.position;
 				StartCoroutine (finishGameDemo());
 			}
 
@@ -71,7 +70,11 @@ public class BoatBehavior : MonoBehaviour {
 	}
 
 	IEnumerator finishGameDemo(){
-		yield return new WaitForSeconds (3f);
+		while(Vector3.Distance(gameObject.transform.position,boatNewPostion.transform.position)>0.1f){
+			gameObject.transform.position=Vector3.Lerp(gameObject.transform.position, boatNewPostion.transform.position,0.005f);
+			yield return new WaitForSeconds (0.01f);
+		}
+
 		gameManager.changeFinishMessage ("Gracias por terminar la DEMO");
 		gameObject.transform.position = boatDeadNewPostion.transform.position;
 		gameManager.showPanel ();
