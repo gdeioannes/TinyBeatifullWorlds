@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4374DA1E-9C4D-BE98-E2C0-DF55646202C1}</ProjectGuid>
+    <ProjectGuid>{B2476C62-9EB3-B6A3-6940-EF196DEAF0F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,6 +54,7 @@
      <Compile Include="Assets\script\ObjectInteraction.cs" />
      <Compile Include="Assets\script\ShoalBehavior.cs" />
      <Compile Include="Assets\script\StormBehavior.cs" />
+     <Compile Include="Assets\script\TouchObj.cs" />
      <Compile Include="Assets\script\UiInteraction.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

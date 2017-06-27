@@ -71,12 +71,11 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 
 	IEnumerator finishGameDemo(){
 		while(Vector3.Distance(gameObject.transform.position,boatNewPostion.transform.position)>0.1f){
-			gameObject.transform.position=Vector3.Lerp(gameObject.transform.position, boatNewPostion.transform.position,0.005f);
+			gameObject.transform.position=Vector3.Lerp(gameObject.transform.position, boatNewPostion.transform.position,0.01f);
 			yield return new WaitForSeconds (0.01f);
 		}
 
 		gameManager.changeFinishMessage ("Gracias por terminar la DEMO");
-		gameObject.transform.position = boatDeadNewPostion.transform.position;
 		gameManager.showPanel ();
 		yield return null;
 	}
