@@ -24,16 +24,18 @@ public class GenericTextMsg : MonoBehaviour {
 	}
 
 	public void animateMsg(string msg,GameObject gObj){
-		if(Camera.main.WorldToScreenPoint(gObj.transform.position).x>Screen.width/2){
-			gameObject.transform.localScale=new Vector3(-1,1,1);
-			text.gameObject.transform.localScale=new Vector3(-1,1,1);
-		}else{
-			gameObject.transform.localScale=new Vector3(1,1,1);
-			text.gameObject.transform.localScale=new Vector3(1,1,1);
+		if(!gameManager.animateFlag){
+			if(Camera.main.WorldToScreenPoint(gObj.transform.position).x>Screen.width/2){
+				gameObject.transform.localScale=new Vector3(-1,1,1);
+				text.gameObject.transform.localScale=new Vector3(-1,1,1);
+			}else{
+				gameObject.transform.localScale=new Vector3(1,1,1);
+				text.gameObject.transform.localScale=new Vector3(1,1,1);
+			}
+			gameObject.SetActive(true);
+			gameObject.transform.position=Camera.main.WorldToScreenPoint(gObj.transform.position);
+			text.text=""+msg;
+			StartCoroutine( gameManager.animateAndHideObject(gameObject,90));
 		}
-		gameObject.SetActive(true);
-		gameObject.transform.position=Camera.main.WorldToScreenPoint(gObj.transform.position);
-		text.text=""+msg;
-		StartCoroutine( gameManager.animateAndHideObject(gameObject,90));
 	}
 }

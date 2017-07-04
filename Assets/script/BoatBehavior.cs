@@ -24,8 +24,8 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 	}
 
 	public void objectInteraction(){
-		
-		if (!gameManager.lightHouseOnFlag && !gameManager.animateFlag ){
+		SoundManager._instance.playSeagull();
+		if (!gameManager.lightHouseOnFlag && !gameManager.animateFlag){
 			countTouch = countTouch + 1;
 			GenericTextMsg._instance.animateMsg("No puedo ver la costa",gameObject);
 		}else if(gameManager.lightHouseOnFlag && !gameManager.stormLeaveFlag){

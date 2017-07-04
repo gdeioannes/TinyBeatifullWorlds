@@ -22,6 +22,7 @@ public class StormBehavior : MonoBehaviour,TouchObj {
 	public void objectInteraction(){
 		lightExplotion.Play ();
 		lighting.Play ();
+		SoundManager._instance.playThunder();
 		if (gameManager.lightHouseOnFlag == false) {
 
 			ligth.SetActive (true);
