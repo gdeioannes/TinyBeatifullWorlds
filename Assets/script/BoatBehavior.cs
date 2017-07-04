@@ -8,15 +8,14 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 	public GameObject squid;
 	public GameObject boatNewPostion;
 	public GameObject boatDeadNewPostion;	
-	public GameObject textCoast;
 	private int maxTouch = 5;
 	private int countTouch = 0;
+	private bool toggleMsg=true;
 
 
 	// Use this for initialization
 	void Start () {
 		squid.SetActive (false);
-		textCoast.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -28,7 +27,9 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 		
 		if (!gameManager.lightHouseOnFlag && !gameManager.animateFlag ){
 			countTouch = countTouch + 1;
-			StartCoroutine (gameManager.animateAndHideObject(textCoast,1));
+			GenericTextMsg._instance.animateMsg("No puedo ver la costa",gameObject);
+		}else if(gameManager.lightHouseOnFlag && !gameManager.stormLeaveFlag){
+			GenericTextMsg._instance.animateMsg("Costa a la vista, la tormenta es muy fuerte!!",gameObject);
 		}
 
 		if (!gameManager.lightHouseOnFlag && !gameManager.stormLeaveFlag) {
@@ -55,7 +56,16 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 		} else if (!gameManager.squidBusyFlag && gameManager.stormLeaveFlag) {
 			StartCoroutine( gameManager.fadeInSprite (squid,0.01f));
 				gameManager.changeMessage ("Y el bote fue detenido por el calamar");
-		} else if (gameManager.squidBusyFlag && gameManager.stormLeaveFlag){
+			if(toggleMsg){
+				GenericTextMsg._instance.animateMsg("Un Calamar Gigante!!",gameObject);
+				toggleMsg=false;
+			}else{
+				GenericTextMsg._instance.animateMsg("Hay un Cardumen abajo!!",gameObject);
+				toggleMsg=true;
+			}
+		} else if (gameManager.squidBusyFlag && gameManager.stormLeaveFlag && !gameManager.gameFinishFlag){
+				gameManager.gameFinishFlag=true;
+				GenericTextMsg._instance.animateMsg("Avancen camaradas!!",gameObject);
 				gameManager.changeMessage ("El barco llego al puerto al fin");
 				StartCoroutine (finishGameDemo());
 			}

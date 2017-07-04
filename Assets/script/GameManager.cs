@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour {
 	public Text finishMessage;
 	public GameObject panelMenu;  
 	public bool animateFlag=false;
-
+	public GameObject fadeScreen;
+	public bool gameFinishFlag=false;
 
 
 
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		panelMenu.SetActive (false);
+		fadeScreen.SetActive(true);
+		StartCoroutine( fadeOutSpriteImage(fadeScreen,0.1f));
 	}
 	
 	// Update is called once per frame
@@ -56,7 +59,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public IEnumerator animateAndHideObject(GameObject obj,float move){
-
+			
 			if(!animateFlag){
 				animateFlag = true;	
 				Debug.Log ("Star Transition");
@@ -90,7 +93,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator fadeSprite(GameObject obj,float delay){
+	public IEnumerator fadeOutSprite(GameObject obj,float delay){
 			Debug.Log ("Star Alpha Transition");
 			Color color = obj.GetComponent<SpriteRenderer> ().color;
 			Debug.Log ("Alpha " + color.a);
@@ -103,6 +106,21 @@ public class GameManager : MonoBehaviour {
 			obj.SetActive (false);
 		yield return null;
 		
+	}
+
+	public IEnumerator fadeOutSpriteImage(GameObject obj,float delay){
+		Debug.Log ("Star Alpha Transition");
+		Color color = obj.GetComponent<Image> ().color;
+		Debug.Log ("Alpha " + color.a);
+		while (obj.GetComponent<Image> ().color.a > 0.05){
+			Debug.Log ("Alpha "+color.a );
+			color.a = Mathf.Lerp (color.a, 0,0.1f);
+			obj.GetComponent<Image> ().color=color;
+			yield return new WaitForSeconds (delay);
+		}
+		obj.SetActive (false);
+		yield return null;
+
 	}
 
 	public IEnumerator fadeInSprite(GameObject obj,float delay){

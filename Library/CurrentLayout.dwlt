@@ -62,8 +62,8 @@ MonoBehaviour:
     y: 0
     width: 1066
     height: 359
-  m_MinSize: {x: 100, y: 122}
-  m_MaxSize: {x: 4000, y: 4022}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 122}
   m_MaxSize: {x: 4000, y: 4022}
   vertical: 0
-  controlID: 243
+  controlID: 2571
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 64
+  controlID: 9
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 22
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -413,18 +413,18 @@ MonoBehaviour:
       y: 17
       width: 658
       height: 481
-    m_Scale: {x: 0.49585518, y: 0.49585518}
-    m_Translation: {x: 329, y: 239.56319}
+    m_Scale: {x: 0.50104165, y: 0.50104165}
+    m_Translation: {x: 329, y: 240.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -663.5002
-      y: -483.13135
-      width: 1327.0004
-      height: 970.04126
+      x: -656.632
+      y: -480
+      width: 1313.264
+      height: 960
     m_MinimalGUI: 1
   m_defaultScale: 0.50104165
   m_TargetTexture: {fileID: 0}
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 1316, y: 996}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000100000100
+  m_LowResolutionForAspectRatios: 01000001000100000100
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -460,14 +460,14 @@ MonoBehaviour:
     width: 658
     height: 265
   m_SceneLighting: 1
-  lastFramingTime: 6172.6389009952545
+  lastFramingTime: 8166.533222973347
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.1063077, y: -1.9464018, z: -0.29563314}
+    m_Target: {x: -2.383369, y: -2.7622678, z: 0}
     speed: 2
-    m_Value: {x: 2.1063077, y: -1.9464018, z: -0.29563314}
+    m_Value: {x: -2.383369, y: -2.7622678, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -494,14 +494,14 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.3424067
+    m_Target: 14.777846
     speed: 2
-    m_Value: 5.3424067
+    m_Value: 14.777846
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
-  m_LastSceneViewRotation: {x: 0.0095088845, y: -0.47552946, z: 0.0051404424, w: 0.87963337}
+  m_LastSceneViewRotation: {x: 0.14096431, y: -0.7892171, z: 0.19716255, w: 0.5642627}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -535,28 +535,28 @@ MonoBehaviour:
     height: 784
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac770000
-    m_LastClickedID: 30636
-    m_ExpandedIDs: b83bf8ff8441f8ff3045f8ff9645f8ffa80bfbffe40dfbff8adefdffe4fbffff000000004a260000502600005e26000090260000b02600000827000024270000ca270000a4410000aa410000ea41000034420000624200005a7400006a74000074740000867400008c7400009e770000a2770000ac770000be770000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: c63ffcff6e40fcff3a41fcff4441fcff4088fcfff088fcffb889fcffbe89fcff5897fcff0898fcffd098fcffd698fcffbc33fdff6434fdff0035fdff7e83fdff2884fdff1ae9ffff14efffffe4fbffff000000002e260000ae260000c6260000f4260000bc270000c8270000a0af0000a6af000070b000008ecb00005ecc000032cd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Squid
+      m_OriginalName: Squid
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 45356
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
   m_ExpandedScenes:
-  - Escena_Menu
+  - Escena_1_botella_1
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -597,20 +597,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/scene
+    - Assets/script
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/scene
+  - Assets/script
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: "/Users/Trendingames/Talca/IDVRV/Cursos /Introduccio\u0301n a
-    los Videojuegos/2017 1er Semestre/Proyectos_Finales/Small world Unity Project"
+  m_LastProjectPath: /Users/Trendingames/TinyBeatifullWorlds
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f8240000
-    m_LastClickedID: 9464
-    m_ExpandedIDs: 00000000a824000000ca9a3bffffff7f
+    m_SelectedIDs: 12250000
+    m_LastClickedID: 9490
+    m_ExpandedIDs: 00000000aa24000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -638,7 +637,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8240000
+    m_ExpandedIDs: 00000000aa240000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,18 +668,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 8425000052250000ac43000070560000d2240000082700005e25000004270000445d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: scene
-      m_OriginalName: scene
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9464
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:

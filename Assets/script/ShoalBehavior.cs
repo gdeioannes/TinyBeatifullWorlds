@@ -23,7 +23,7 @@ public class ShoalBehavior : MonoBehaviour,TouchObj {
 			gameManager.squidBusyFlag = true;
 			gameManager.changeMessage ("El calamar llena su barriga");
 			squid.SetActive (true);
-			squid.transform.position=squidNewPostion.transform.position;
+			StartCoroutine( gameManager.animateObject(squid,squidNewPostion));
 		}
 	}
 }

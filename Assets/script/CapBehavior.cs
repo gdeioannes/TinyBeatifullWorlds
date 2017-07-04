@@ -31,16 +31,16 @@ public class CapBehavior : MonoBehaviour,TouchObj {
 			
 			gameManager.stormLeaveFlag = true;
 
-			StartCoroutine( gameManager.fadeSprite (storm,0.1f));
+			StartCoroutine( gameManager.fadeOutSprite (storm,0.1f));
 			if (gameManager.lightHouseOnFlag == false) {
 				gameManager.changeMessage ("La Historia termina abruptamente.");
 				gameManager.showPanel ();
 			} else {
 				gameManager.changeMessage ("Y las historia continua");
 				scene_2.gameObject.SetActive (true);
-				StartCoroutine( gameManager.fadeSprite (waterStorm,0.1f));
-				StartCoroutine( gameManager.fadeSprite (fog_1,0.3f));
-				StartCoroutine( gameManager.fadeSprite (fog_2,0.4f));
+				StartCoroutine( gameManager.fadeOutSprite (waterStorm,0.1f));
+				StartCoroutine( gameManager.fadeOutSprite (fog_1,0.3f));
+				StartCoroutine( gameManager.fadeOutSprite (fog_2,0.4f));
 				gameObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
 				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 				gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, Random.Range(200f,350f)));

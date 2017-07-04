@@ -6,7 +6,6 @@ public class LightHouseBehavior : MonoBehaviour,TouchObj {
 
 	public GameManager gameManager;
 	public GameObject textElectricity;
-	public GameObject textBoat;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +20,9 @@ public class LightHouseBehavior : MonoBehaviour,TouchObj {
 	public void objectInteraction(){
 		if (gameManager.lightHouseOnFlag == false) {
 			Debug.Log ("LigthHouseBehavior");
-			StartCoroutine(gameManager.animateAndHideObject (textElectricity, 1f));
+			GenericTextMsg._instance.animateMsg("No hay electricidad!",gameObject);
+		}else{
+			GenericTextMsg._instance.animateMsg("Barco a la vista!",gameObject);
 		}
 		
 	}

@@ -49,10 +49,12 @@
      <Compile Include="Assets\script\BoatBehavior.cs" />
      <Compile Include="Assets\script\CapBehavior.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
+     <Compile Include="Assets\script\GenericTextMsg.cs" />
      <Compile Include="Assets\script\LightHouseBehavior.cs" />
      <Compile Include="Assets\script\MainImageBehavior.cs" />
      <Compile Include="Assets\script\ObjectInteraction.cs" />
      <Compile Include="Assets\script\ShoalBehavior.cs" />
+     <Compile Include="Assets\script\SquidBehavior.cs" />
      <Compile Include="Assets\script\StormBehavior.cs" />
      <Compile Include="Assets\script\TouchObj.cs" />
      <Compile Include="Assets\script\UiInteraction.cs" />
