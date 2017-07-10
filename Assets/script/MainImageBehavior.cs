@@ -17,6 +17,7 @@ public class MainImageBehavior : MonoBehaviour {
 		if(gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime>1){
 			ui.SetActive (true);
 		}
-		
+
+
 	}
 }

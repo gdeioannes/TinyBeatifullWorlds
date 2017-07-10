@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UiInteraction : MonoBehaviour {
 
+	public GameObject imageFade;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,11 +22,17 @@ public class UiInteraction : MonoBehaviour {
 
 			Debug.Log("Collider "+hit.collider.gameObject.name);
 			if(hit.collider.gameObject.name=="BotonComienzo"){				
-					Application.LoadLevel (1);
+					StartCoroutine(fadeTransition());
 				}
 
 			}
 		}
+	}
+
+	IEnumerator fadeTransition(){
+		StartCoroutine(Transitions._instance.fadeInImage(imageFade,0.05f));
+		yield return new WaitForSeconds(2f);
+		Application.LoadLevel (1);
 	}
 		
 	public void backMenu(){

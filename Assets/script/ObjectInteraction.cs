@@ -24,5 +24,7 @@ public class ObjectInteraction : MonoBehaviour {
 				}
 			}
 		}  
+
+		//Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
 	}
 }
