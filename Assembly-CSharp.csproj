@@ -46,18 +46,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\script\BoatBehavior.cs" />
-     <Compile Include="Assets\script\CapBehavior.cs" />
-     <Compile Include="Assets\script\GameManager.cs" />
+     <Compile Include="Assets\script\Agents\BoatBehavior.cs" />
+     <Compile Include="Assets\script\Agents\CapBehavior.cs" />
+     <Compile Include="Assets\script\Agents\LightHouseBehavior.cs" />
+     <Compile Include="Assets\script\Agents\ShoalBehavior.cs" />
+     <Compile Include="Assets\script\Agents\SquidBehavior.cs" />
+     <Compile Include="Assets\script\Agents\StormBehavior.cs" />
      <Compile Include="Assets\script\GenericTextMsg.cs" />
-     <Compile Include="Assets\script\LightHouseBehavior.cs" />
      <Compile Include="Assets\script\MainImageBehavior.cs" />
      <Compile Include="Assets\script\ObjectInteraction.cs" />
-     <Compile Include="Assets\script\ShoalBehavior.cs" />
-     <Compile Include="Assets\script\SquidBehavior.cs" />
-     <Compile Include="Assets\script\StormBehavior.cs" />
      <Compile Include="Assets\script\TouchObj.cs" />
+     <Compile Include="Assets\script\Transitions.cs" />
      <Compile Include="Assets\script\UiInteraction.cs" />
+     <Compile Include="Assets\script\ZoomControl.cs" />
+     <Compile Include="Assets\script\managers\GameManager.cs" />
+     <Compile Include="Assets\script\managers\SoundManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
