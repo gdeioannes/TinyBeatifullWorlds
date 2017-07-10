@@ -51,7 +51,7 @@ public class CapBehavior : MonoBehaviour,TouchObj {
 			Vector3 newPos=new Vector3(gameObject.transform.position.x,gameObject.transform.position.y+(0.5f+(Random.Range(0.4f,0.10f))),gameObject.transform.position.z);
 			
 			StartCoroutine(Transitions._instance.animateObject(gameObject,newPos,20));
-
+			Debug.Log("Rotate CAp");
 			if (gameManager.lightHouseOnFlag && !Transitions._instance.animateFlag) {
 				gameManager.changeMessage ("Sigue");
 				GenericTextMsg._instance.animateMsg("La tapa esta suelta",gameObject);
