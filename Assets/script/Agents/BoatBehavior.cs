@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoatBehavior : MonoBehaviour,TouchObj {
 
-	public BoatBehavior _instance;
+	public static BoatBehavior _instance;
 	public GameManager gameManager;
 	public GameObject squid;
 	public GameObject boatNewPostion;
@@ -28,7 +28,9 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 	}
 
 	public void objectInteraction(){
-		SoundManager._instance.playSeagull();
+		if(!GameManager._instance.gameFinishFlag){
+			SoundManager._instance.playSeagull();
+		}
 		if (!gameManager.lightHouseOnFlag && !Transitions._instance.animateFlag){
 			countTouch = countTouch + 1;
 			if (!gameManager.lightHouseOnFlag && !gameManager.stormLeaveFlag) {
@@ -71,8 +73,6 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 			}
 		} else if (gameManager.squidBusyFlag && gameManager.stormLeaveFlag && !gameManager.gameFinishFlag){
 				gameManager.gameFinishFlag=true;
-				GenericTextMsg._instance.animateMsg("Avancen camaradas!!",gameObject);
-				gameManager.changeMessage ("El barco llego al puerto al fin");
 				StartCoroutine (finishGameDemo());
 			}
 
@@ -91,12 +91,14 @@ public class BoatBehavior : MonoBehaviour,TouchObj {
 			yield return new WaitForSeconds (0.01f);
 		}
 
-		gameManager.changeFinishMessage ("Gracias por terminar la DEMO");
+		GenericTextMsg._instance.animateMsgNoConditions("Llegamos Camaradas!!",gameObject);
+		yield return new WaitForSeconds (3f);
+		gameManager.changeFinishMessage ("El barco ha logrado llegar a la costa. Gracias por terminar la DEMO");
 		gameManager.showPanel ();
 		yield return null;
 	}
 
-	IEnumerator endLooseGame(){
+	public IEnumerator endLooseGame(){
 		gameManager.changeFinishMessage ("'Se nos debe liberar de la esperanza que el mar pueda reposar alguna vez. Debemos aprender a navergar con vientos fuertes' Aristoteles Onassis");
 		StartCoroutine(Transitions._instance.animateObject( gameObject, boatDeadNewPosition,20));
 		GameManager._instance.gameFinishFlag=true;

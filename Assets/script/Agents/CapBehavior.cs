@@ -37,6 +37,7 @@ public class CapBehavior : MonoBehaviour,TouchObj {
 			StartCoroutine( Transitions._instance.fadeInSprite (clouds,0.5f));
 			if (gameManager.lightHouseOnFlag == false) {
 				GenericTextMsg._instance.animateMsg("La Historia termina en trajedia.",gameObject);
+				StartCoroutine (BoatBehavior._instance.endLooseGame());
 				GameManager._instance.gameFinishFlag=true;
 				addPhysics ();
 				StartCoroutine(looseGame());
